@@ -28,6 +28,8 @@
   <link rel="<%= chunk.initial?'preload':'prefetch' %>" href="<%= htmlWebpackPlugin.files.publicPath + file %>" as="<%= file.match(/\.css$/)?'style':'script' %>">
   <% }}} %>
 
+  <link rel="unity-icon" type="image/png" sizes="154x130" href="<%= htmlWebpackPlugin.files.publicPath %>static/unitybuild/TemplateData/progressLogo.Light.png">
+  <link rel="unity-icon" type="image/png" sizes="154x130" href="<%= htmlWebpackPlugin.files.publicPath %>static/unitybuild/TemplateData/progressLogo.Dark.png">
   <link rel="shortcut icon" href="<%= htmlWebpackPlugin.files.publicPath %>static/unitybuild/TemplateData/favicon.ico">
   <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.publicPath %>static/unitybuild/TemplateData/style.css">
   <script src="<%= htmlWebpackPlugin.files.publicPath %>static/unitybuild/TemplateData/UnityProgress.js"></script>
