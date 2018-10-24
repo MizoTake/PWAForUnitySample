@@ -27,6 +27,11 @@
           if (file.match(/\.(js|css)$/)) { %>
   <link rel="<%= chunk.initial?'preload':'prefetch' %>" href="<%= htmlWebpackPlugin.files.publicPath + file %>" as="<%= file.match(/\.css$/)?'style':'script' %>">
   <% }}} %>
+
+  <link rel="shortcut icon" href="<%= htmlWebpackPlugin.files.publicPath %>static/unitybuild/TemplateData/favicon.ico">
+  <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.publicPath %>static/unitybuild/TemplateData/style.css">
+  <script src="<%= htmlWebpackPlugin.files.publicPath %>static/unitybuild/TemplateData/UnityProgress.js"></script>
+  <script src="<%= htmlWebpackPlugin.files.publicPath %>static/unitybuild/Build/UnityLoader.js"></script>
 </head>
 
 <body>
