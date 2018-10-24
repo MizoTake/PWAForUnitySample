@@ -7,20 +7,19 @@
       <unity src="static/unityBuild/Build/unityBuild.json"
         v-bind="{ width: gameWidth, height: gameHeight }"
        unityLoader="static/unityBuild/Build/UnityLoader.js"></unity>
-      <!-- <style src="static/unitybuild/TemplateData/style.css"></style> -->
     </main>
   </div>
 </template>
 
 <script>
-import Unity from 'vue-unity-webgl'
+import unity from 'vue-unity-webgl'
 
 export default {
   name: 'app',
   data: function () {
     return {
       gameWidth: window.innerWidth,
-      gameHeight: window.innerHeight
+      gameHeight: window.innerHeight * 0.96 - 134 // 134はヘッダー等の値
     }
   },
   methods: {
@@ -35,7 +34,7 @@ export default {
   beforeDestroy: function () {
     window.removeEventListener('resize', this.handleResize)
   },
-  components: Unity
+  components: { unity }
 }
 </script>
 
