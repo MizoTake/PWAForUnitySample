@@ -5,6 +5,14 @@
 - Vue.js
 - [vue-unity-webgl](https://www.npmjs.com/package/vue-unity-webgl)
 
+## deploy
+```
+npm run build
+```
+```
+firebase deploy
+```
+
 # PWAforUnity
 
 > A Vue.js project

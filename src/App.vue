@@ -6,7 +6,8 @@
     <main>
       <unity src="static/unityBuild/Build/unityBuild.json"
         v-bind="{ width: gameWidth, height: gameHeight }"
-       unityLoader="static/unityBuild/Build/UnityLoader.js"></unity>  
+       unityLoader="static/unityBuild/Build/UnityLoader.js"></unity>
+      <!-- <style src="static/unitybuild/TemplateData/style.css"></style> -->
     </main>
   </div>
 </template>
@@ -18,8 +19,8 @@ export default {
   name: 'app',
   data: function () {
     return {
-      gameWidth: window.innerWidth * 0.95,
-      gameHeight: window.innerHeight * 0.8
+      gameWidth: window.innerWidth,
+      gameHeight: window.innerHeight
     }
   },
   methods: {
