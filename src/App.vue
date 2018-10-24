@@ -4,15 +4,38 @@
       <span>Vue.js PWA</span>
     </header>
     <main>
-      <img src="./assets/logo.png" alt="Vue.js PWA">
-      <router-view></router-view>
+      <unity src="static/unityBuild/Build/unityBuild.json"
+        v-bind="{ width: gameWidth, height: gameHeight }"
+       unityLoader="static/unityBuild/Build/UnityLoader.js"></unity>  
+      <!-- <router-view></router-view> -->
     </main>
   </div>
 </template>
 
 <script>
+import Unity from 'vue-unity-webgl'
+
 export default {
-  name: 'app'
+  name: 'app',
+  data: function () {
+    return {
+      gameWidth: window.innerWidth * 0.95,
+      gameHeight: window.innerHeight * 0.8
+    }
+  },
+  methods: {
+    handleResize: function () {
+      this.gameWidth = window.innerWidth
+      this.gameHeight = window.innerHeight
+    }
+  },
+  ready: function () {
+    window.addEventListener('resize', this.handleResize)
+  },
+  beforeDestroy: function () {
+    window.removeEventListener('resize', this.handleResize)
+  },
+  components: Unity
 }
 </script>
 
