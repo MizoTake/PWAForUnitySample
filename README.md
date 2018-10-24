@@ -1,5 +1,7 @@
 # PWA for Unity Sample
 
+![sample](.gif/sample.gif)
+
 ## usage
 
 - Vue.js
