@@ -7,7 +7,6 @@
       <unity src="static/unityBuild/Build/unityBuild.json"
         v-bind="{ width: gameWidth, height: gameHeight }"
        unityLoader="static/unityBuild/Build/UnityLoader.js"></unity>  
-      <!-- <router-view></router-view> -->
     </main>
   </div>
 </template>
